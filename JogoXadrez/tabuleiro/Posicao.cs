@@ -11,8 +11,9 @@ namespace tabuleiro
       this.coluna = coluna;
     }
 
-    public override string ToString(){
-      return linha + ", "+ coluna;
+    public override string ToString()
+    {
+      return linha + ", " + coluna;
     }
   }
 }
