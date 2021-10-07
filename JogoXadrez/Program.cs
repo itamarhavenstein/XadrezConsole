@@ -14,10 +14,16 @@ namespace JogoXadrez
         while (!partida.Terminada)
         {
           Console.Clear();
-          Tela.ImprimirTabuleiro(partida.tab);
+          Tela.ImprimirTabuleiro(partida.Tab);
 
           Console.Write("Origem: ");
           Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
+
+          bool[,] posicoesPossiveis = partida.Tab.Parts(origem).MovimentosPossiveis();
+
+          Console.Clear();
+          Tela.ImprimirTabuleiro(partida.Tab, posicoesPossiveis);
+
           Console.Write("Destino: ");
           Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
 
