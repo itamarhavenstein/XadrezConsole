@@ -18,6 +18,11 @@ namespace tabuleiro
       return Pecas[linha, coluna];
     }
 
+    public Peca Parts(Posicao pos)
+    {
+      return Pecas[pos.Linha, pos.Coluna];
+    }
+    
     public Peca RetirarPeca(Posicao pos){
       if(Parts(pos) == null){
         return null;
@@ -26,11 +31,6 @@ namespace tabuleiro
       aux.Posicao = null;
       Pecas[pos.Linha, pos.Coluna] = null;
       return aux;
-    }
-
-    public Peca Parts(Posicao pos)
-    {
-      return Pecas[pos.Linha, pos.Coluna];
     }
 
     public void ColocarPeca(Peca peca, Posicao pos)
