@@ -173,6 +173,8 @@ namespace xadrez
 
       Peca p = Tab.Parts(destino);
       //#JogadaEspecial promocao
+      //essa técnica é usada em vários jogos de xadrez, 
+      //mas poderiamos fazer a pergunta para o usuário e colocar a peça que ele escolher
       if (p is Peao)
       {
         if ((p.Cor == Cor.Branca && destino.Linha == 0) || (p.Cor == Cor.Preta && destino.Linha == 7))
